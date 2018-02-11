@@ -1,18 +1,41 @@
 .App {
   position:absolute;
   text-align: center;
-  background-color: #88C0CB;
+  background-color: #F6F7F8;
   height: 100%;
   width: 100%;
   overflow-y: scroll;
+}
+
+h1 {
+  position: absolute;
+  width: 100%;
+  background-color: grey;
+  margin: 0;
+  height: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 1000;
+  box-shadow: 0px 0px 4px 2px rgba(0,0,0,.5);
+}
+
+h3 {
+  margin: 0;
+}
+.Details h3 {
+  margin: 20px 0;
 }
 
 .Details {
   width: 80%;
   margin: 0 auto;
   background-color: #AAABAB;
-  padding: 10px;
+  padding: 0;
+  margin-top: 80px;
   margin-bottom: 30px;
+  z-index: 0;
+  padding: 20px;
+  box-shadow: 0px 0px 4px 2px rgba(0,0,0,.5);
 }
 
 table {

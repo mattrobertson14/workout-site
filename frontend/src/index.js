@@ -5,18 +5,18 @@ import thunk from 'redux-thunk';
 import './stylesheets/index.css';
 import Root from './components/Root.js';
 import rootReducer from './reducers';
-import registerServiceWorker from './registerServiceWorker';
+//import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(
 	rootReducer,
 	compose(
 		applyMiddleware(thunk),
-		window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+		//window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 	)
 );
 
 ReactDOM.render(
-	<Root store={store} />, 
+	<Root store={store} />,
 	document.getElementById('root')
 );
-registerServiceWorker();
+//registerServiceWorker();

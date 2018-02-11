@@ -3,6 +3,41 @@ import { CHANGE_DAY, CHANGE_WEEK } from '../actions';
 import { air_alert } from './air_alert.js'
 import { lifting } from './lifting.js'
 import { core, flexibility } from './coreAndFlexibility.js';
+
+let date = new Date();
+let day = date.getDay();
+if (day === 0){
+	day = 7
+}
+
+let d = date.getDate();
+let week = 0;
+if (date.getMonth() === 1){
+	if (d >= 4 && d <= 10) { week = 1 }
+	if (d >= 11 && d <= 17) { week = 2 }
+	if (d >= 18 && d <= 24) { week = 3 }
+	if (d >= 25 && d <= 28) { week = 4 }
+}
+if (date.getMonth() === 2){
+	if (d >= 1 && d <= 3) { week = 4 }
+	if (d >= 4 && d <= 10) { week = 5 }
+	if (d >= 11 && d <= 17) { week = 6 }
+	if (d >= 18 && d <= 24) { week = 7 }
+	if (d >= 25 && d <= 31) { week = 8 }
+}
+if (date.getMonth() === 3){
+	if (d >= 1 && d <= 7) { week = 9 }
+	if (d >= 8 && d <= 14) { week = 10 }
+	if (d >= 15 && d <= 21) { week = 11 }
+	if (d >= 22 && d <= 28) { week = 12 }
+	if (d >= 29 && d <= 30) { week = 13 }
+}
+if (date.getMonth() === 4){
+	if (d >= 1 && d <= 5) { week = 13 }
+	if (d >= 6 && d <= 12) { week = 14 }
+	if (d >= 13 && d <= 19) { week = 15 }
+}
+
 const initialState = {
 	weeks: [
 		{name: "Week 1", display: "2/4 - 2/10", value: 1},
@@ -34,8 +69,8 @@ const initialState = {
 	lifting : lifting,
 	core : core,
 	flexibility: flexibility,
-	chosenWeek : 1,
-	chosenDay: 1,
+	chosenWeek : week,
+	chosenDay: day,
 }
 
 function rootReducer (state = initialState, action) {

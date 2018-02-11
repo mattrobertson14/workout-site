@@ -16,6 +16,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploys": "npm run build&&surge"
+  },
+  "homepage": "https://mattrobertson14.github.io/workout-site/",
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }

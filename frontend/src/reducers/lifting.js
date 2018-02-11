@@ -13,9 +13,11 @@ export const lifting = {
       id : 2,
       exercises : [
         {id: "bc", name: "Barbell Curls", sets: 4, reps: 8},
-        {id: "dc", name: "Dumbell Curls", sets: 4, reps: 8},
-        {id: "mc", name: "Masonry Curls", sets: 4, reps: 8},
-        {id: "rgc", name: "Reverse Grip Curls", sets: 4, reps: 6}
+        {id: "dc", name: "Dumbell Curls", sets: 4, reps: 6},
+        {id: "mc", name: "Masonry Curls", sets: 4, reps: 6},
+        {id: "rgc", name: "Reverse Grip Curls", sets: 4, reps: 6},
+        {id: "cm", name: "Curl Machine", sets: 4, reps: 8},
+        {id: "cc", name: "Concentrated Curl", sets: 4, reps: 6}
       ]
     },
     wednesday : {
@@ -68,22 +70,32 @@ export const lifting = {
       unit: "lbs"
     },
     bc : {
-      starting : 10.0,
+      starting : 45.0,
       weeklyIncrement : {operation: "add", value: 2.5},
       unit: "lbs"
     },
     dc : {
-      starting : 10.0,
+      starting : 25.0,
       weeklyIncrement : {operation: "add", value: 2.5},
       unit: "lbs"
     },
     mc : {
       starting : 10.0,
       weeklyIncrement : {operation: "add", value: 2.5},
-      unit: "lbs"
+      unit: "lbs / side"
     },
     rgc : {
-      starting : 10.0,
+      starting : 30.0,
+      weeklyIncrement : {operation: "add", value: 2.5},
+      unit: "lbs"
+    },
+    cm : {
+      starting : 50.0,
+      weeklyIncrement : {operation: "add", value: 5},
+      unit: "lbs"
+    },
+    cc : {
+      starting : 15.0,
       weeklyIncrement : {operation: "add", value: 2.5},
       unit: "lbs"
     },
